@@ -1,3 +1,10 @@
+<?php
+require './libs/Sessions.php';
+$result = (new Sessions)->get("user_login");
+if (empty($result)) {
+    Header("Location: ./");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
